@@ -1,0 +1,12 @@
+{
+  "name": "1st-week-sessions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "conversationstarters": "node conversation-starters.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
