@@ -16,7 +16,9 @@ The expected output of this function can be an array of strings or a string that
 Hint: you can use using object access syntax,
 basic conditionals and array manipulation to solve this challenge
 
-2.
+2. Five mini challenges with arrays
+
+See `userApi.js` for hints and details
 
 ### React Native Challenge
 

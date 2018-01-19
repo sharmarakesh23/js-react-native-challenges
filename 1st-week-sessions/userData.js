@@ -1,4 +1,4 @@
-const profiles = [
+module.exports = [
   {
     gender: "female",
     name: {
@@ -1850,5 +1850,3 @@ const profiles = [
     nat: "CA"
   }
 ];
-
-console.log(profiles);
