@@ -30,8 +30,8 @@ const me = {
 
 const partner = {
   name: "Savita",
-  neverMarried: false,
-  age: 41,
+  neverMarried: true,
+  age: 42,
   education: "Masters - Marketing",
   community: "Marathi",
   bio:
@@ -48,3 +48,51 @@ const partner = {
 /* 
   Start writing function here
 */
+
+
+function createConversationStarters(currentUser, partner) {
+  const starterList = [];
+
+  if (isSameAge(currentUser, partner)) {
+    starterList.push(`You bohth have same age  ${currentUser.age} years`);
+  }
+
+  starterList.push(isBothNeverMarried(currentUser, partner) ? 
+  `You both are sigle`: 
+  `You both are diversed`);
+
+  if (isSameLocation(currentUser, partner)) {
+    starterList.push(`You both live in ${currentUser.location.city}`);
+  }
+
+  if (isSameCommunity(currentUser, partner)) {
+    starterList.push(`she is from the ${currentUser.community} community as well`);
+  }
+  
+  return starterList;
+}
+
+function isSameLocation(myProfile, partnerProfile) {
+  return myProfile.location.city === partnerProfile.location.city;
+}
+
+function isSameCommunity(myProfile, partnerProfile) {
+  return myProfile.community === partnerProfile.community;
+}
+
+function isSameAge(myProfile, partnerProfile) {
+  return myProfile.age === partnerProfile.age;
+}
+
+function isBothNeverMarried(myProfile, partnerProfile) {
+  return myProfile.neverMarried === partnerProfile.neverMarried;
+}
+
+
+const list = createConversationStarters(me, partner);
+
+list.forEach(element => {
+  console.log(element);
+});
+
+
